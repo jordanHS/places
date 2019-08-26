@@ -24,9 +24,9 @@ function City(location, landMarks, timeOfYear) {
 City.prototype.fullCityDetails = function() {
   var btn = document.createElement("BUTTON");   // Create a <button> element
   btn.innerHTML = this.location;
-  btn.setAttribute("id", this.location);                   // Insert text
+  btn.setAttribute("id", this.location);        // Insert text
   document.body.appendChild(btn);               // Append <button> to <body>
-  return this.location + " " + this.landMarks;
+  return "Location is " + this.location + "Landmarks here are " + this.landMarks + "Time of Year Visited ";
 }
 
 Places.prototype.findCity = function(id) {
@@ -53,6 +53,13 @@ Places.prototype.deleteCity = function(id) {
 }
 
 // front end
-
+$(document).ready(function(){
+  //.on( events [, selector ] [, data ], handler )
+    $("#btn").on(click, function() {
+        console.log("btn, i am in the btn click event fxn!", btn);
+        // $( this ).slideUp(); //css feature
+        event.PreventDefault();
+    });
+  // );
+});
 //$(".container").
-//);
