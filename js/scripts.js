@@ -1,49 +1,53 @@
-// Business Logic for AddressBook ---------
-function AddressBook() {
-  this.contacts = [],
+// Business Logic for Places ---------
+function Places() {
+  this.cities = [],
   this.currentId = 0
 }
 
-AddressBook.prototype.addContact = function(contact) {
-  contact.id=this.assignId();
-  this.contacts.push(contact);
+Places.prototype.addCity = function(city) {
+  city.id=this.assignId();
+  this.cities.push(city);
 }
 
-AddressBook.prototype.assignId = function() {
+Places.prototype.assignId = function() {
   this.currentId += 1;
   return this.currentId;
 }
 
-// Business Logic for Contacts ---------
-function Contact(firstName, lastName, phoneNumber) {
-  this.firstName = firstName,
-  this.lastName = lastName,
-  this.phoneNumber = phoneNumber
+// Business Logic for Cities ---------
+function City(location, landMarks, timeOfYear) {
+  this.location = location,
+  this.landMarks = landMarks,
+  this.timeOfYear = timeOfYear
 }
 
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
+City.prototype.fullCityDetails = function() {
+  return this.location + " " + this.landMarks;
 }
 
-AddressBook.prototype.findContact = function(id) {
-  for (var i=0; i< this.contacts.length; i++) {
-     if (this.contacts[i]) {
-      if (this.contacts[i].id == id) {
-        return this.contacts[i];
+Places.prototype.findCity = function(id) {
+  for (var i=0; i< this.cities.length; i++) {
+     if (this.cities[i]) {
+      if (this.cities[i].id == id) {
+        return this.cities[i];
       }
     }
   };
   return false;
 }
 
-AddressBook.prototype.deleteContact = function(id) {
-  for (var i=0; i< this.contacts.length; i++) {
-   if (this.contacts[i]) {
-    if (this.contacts[i].id == id) {
-      delete this.contacts[i];
+Places.prototype.deleteCity = function(id) {
+  for (var i=0; i< this.cities.length; i++) {
+   if (this.cities[i]) {
+    if (this.cities[i].id == id) {
+      delete this.cities[i];
       return true;
     }
    }
   };
   return false;
 }
+
+// front end
+
+$("form")

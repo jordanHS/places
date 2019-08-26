@@ -15,22 +15,24 @@
 
 
 ### Description
-_A project to create and build a to do list app according to specs:_
+_A project to create and build a places (visited) app according to specs:_
 
-Create a web application that takes an input and writes, updates, deletes to a list.
+Create a web application that takes an input and writes, updates, deletes to the app.
 
 
 ### App should:
+
 - Spec: Accept user inputted text
 Input: "text"
 Output: "text"
 - Spec: The program displays inputted text
 Input: "text"
 Output: "text"
-- Spec: Input text to display in a "To Do" List one line at a time
+- Spec: Each destination should be an object with multiple properties(ie. like location, landmarks, time of year, notes, etc.)
+- Spec: Input text to display in a "Places" List one line at a time
 Input: "input a"|input b"
 Output: "input a"| "input b"
-- Spec: When task is finished, "Done" option is chosen, the line item will have a strikethrough and display text "Done" next to it
+- Spec: Display those properties when a user clicks on a place's name.
 Input: "Done" (option chosen)
 Output: "Stricken LineItem" 'Done'.
 
