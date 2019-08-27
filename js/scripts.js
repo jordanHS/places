@@ -26,7 +26,7 @@ City.prototype.fullCityDetails = function() {
   btn.innerHTML = this.location;
   btn.setAttribute("id", this.location);        // Insert text
   document.body.appendChild(btn);               // Append <button> to <body>
-  return "Location is " + this.location + "Landmarks here are " + this.landMarks + "Time of Year Visited ";
+  return "Location is " + this.location + "Landmarks here are " + this.landMarks + "Time of Year Visited " + this.timeOfYear;
 }
 
 Places.prototype.findCity = function(id) {
@@ -55,11 +55,11 @@ Places.prototype.deleteCity = function(id) {
 // front end
 $(document).ready(function(){
   //.on( events [, selector ] [, data ], handler )
-    $("#btn").on(click, function() {
-        console.log("btn, i am in the btn click event fxn!", btn);
-        // $( this ).slideUp(); //css feature
-        event.PreventDefault();
-    });
+    // $("#btn").on(click, `BUTTON#btn`, function() {
+    //     console.log("btn, i am in the btn click event fxn!", btn, ($(this).City()));
+    //     // $( this ).slideUp(); //css feature
+    //     event.PreventDefault();
+    // });
   // );
 });
 //$(".container").
